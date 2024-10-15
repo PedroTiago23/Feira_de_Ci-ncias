@@ -1,0 +1,171 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+/* Estilo do título */
+.pagina__titulo {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #057669;
+}
+
+/* Botões da página inicial */
+.btn-proximo { 
+    padding: 12px 50px;
+    width: 300px;
+    height: 50px;
+    margin: 0 25px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #0288d1; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-proximo:hover {
+    background-color: #0277bd;
+    transform: translateY(-3px); /* Animação de hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-proximo:active {
+    transform: translateY(0px); /* Animação de "pressionado" ao clicar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagina__imagem {
+    width: 800px;
+    height: 400px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.passo {
+    display: none;
+}
+
+.passo.ativo {
+    display: block;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Calculadora */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px; /* Ajusta o tamanho da calculadora */
+    margin: 0 auto; /* Centraliza no meio da página */
+}
+
+h1 {
+    color: #057669;
+}
+
+/* Botões gerais */
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    background-color: #0288d1; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0277bd;
+    transform: translateY(-3px); /* Efeito hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0px); /* Efeito de "pressionamento" ao clicar */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Espaçamento extra abaixo do botão "Clique aqui para calcular" */
+#showCalculatorButton { 
+    margin-bottom: 30px; /* Espaçamento maior */
+}
+
+/* Centralizando os input-groups */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    width: 100%; /* Faz o input ocupar toda a largura disponível */
+    text-align: left; /* Mantém o label alinhado à esquerda */
+}
+
+/* Aparência dos labels */
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #057669;
+    margin-bottom: 8px;
+}
+
+/* Aparência dos inputs */
+input {
+    padding: 10px;
+    width: calc(100% - 20px); /* Ajuste do tamanho para alinhar com a borda */
+    border: 2px solid #057669;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #005b5c;
+    outline: none;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.transparent {
+    opacity: 1;
+}
+
+.visible {
+    opacity: 1;
+}

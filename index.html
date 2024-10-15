@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto feira de ciências</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <!-- Página 01 -->
+        <div class="passo ativo" id="passo-0">
+            <h1 class="pagina__titulo">Você gostaria de aprender como calcular a espessura do fio de cabelo usando laser?
+            </h1>
+            
+            <img class="pagina__imagem" src="/images/pessoa_pensante.jpg">
+            
+            <div class="buttons">
+                <button class="btn-proximo" data-proximo="1">Sim</button>
+                <button class="btn-proximo" id="fake_button" data-proximo="0">Não</button>
+            </div>
+
+        </div>
+
+
+        <!-- Página 02 -->
+        <div class="passo" id="passo-1">
+            
+            <div id="content" class="container, transparent">
+                <h1>Antes de qualquer coisa,vamos entender:</h1>
+                
+                <img class="pagina__imagem" src="images/difração.webp" >
+                
+                <div class="buttons">
+                    <button class="btn-proximo" data-proximo="2">Próximo Passo</button>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <!-- Página 03 -->
+        <div class="passo" id="passo-2">
+            
+            <div id="content" class="container, transparent">
+                
+                <h1>Antes de qualquer coisa,vamos entender:</h1>
+                
+                <img class="pagina__imagem" src="images/young experimento.png" >
+                
+                <div class="buttons">
+                    <button class="btn-proximo" data-proximo="3">Próximo Passo</button>
+                </div>
+              
+                
+            </div>
+        </div>
+
+        <!-- Página 04 -->
+        <div class="passo" id="passo-3">
+            
+            <div id="content" class="container, transparent">
+                
+                <h1>Antes de qualquer coisa,vamos entender:</h1>
+                
+                <img class="pagina__imagem" src="images/espessura_fio.png" >
+                
+                <div class="buttons"> 
+                    <button class="btn-proximo" data-proximo="4">Próximo Passo</button>
+                </div>
+               
+                
+            </div>
+        </div>
+
+        <!-- Página 05 -->
+        <div class="passo" id="passo-4">
+            
+            <div id="content" class="container, transparent">
+                
+                <h1>Calculadora da espessura do fio de cabelo</h1>
+                
+                <button id="showCalculatorButton">Clique aqui para calcular</button>
+
+                <div id="calculator" class="calculator" style="display: none;">
+                    
+                    <div class="input-group">
+                        <label for="x">Distância do laser ao anteparo:</label>
+                        <input type="number" id="x" value="0.0" step="any">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="y">Distância entre os centros dos primeiros máximos:</label>
+                        <input type="number" id="y" value="0.0" step="any">
+                    </div>
+                    
+                    <button id="calculateButton">Mostrar Resultado</button>
+                    
+                    <div id="result" class="result"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
