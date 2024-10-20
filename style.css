@@ -1,7 +1,11 @@
 /* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e0f7fa, #b2dfdb);
+    background-image: url('images/background.jpg');
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* sem repetição de imagem */
+    background-attachment: fixed; /* Garante que a imagem fique fixa no fundo */
     display: flex;
     height: 100vh;
     justify-content: center;
