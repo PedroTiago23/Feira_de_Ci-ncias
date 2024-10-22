@@ -212,7 +212,7 @@ button:active {
     flex-direction: column;
     margin: 15px 0;
     width: 100%; /* Faz o input ocupar toda a largura disponível */
-    text-align: left; /* Mantém o label alinhado à esquerda */
+    text-align: center; /* Mantém o label alinhado à esquerda */
 }
 
 /* Aparência dos labels */
