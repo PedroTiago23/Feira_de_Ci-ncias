@@ -1,7 +1,7 @@
 /* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-image: url('images/background.jpg');
+    font-family: "Protest Strike", sans-serif;
+    background-image: url('images/background-jaga.jpg');
     background-size: cover; /* Faz com que a imagem cubra toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* sem repetição de imagem */
@@ -34,8 +34,9 @@ body {
     height: 50px;
     margin: 0 25px;
     font-size: 20px;
+    font-family: "Protest Strike";
     cursor: pointer;
-    background-color: #0288d1; 
+    background-color: #155e85; 
     color: white;
     border: none;
     border-radius: 8px;
@@ -63,6 +64,22 @@ body {
     margin-top: 2em;
 }
 
+.pagina__imagem2{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 3em;
+    margin-top: 2em;
+}
+
+.difracao__texto{
+    font-size: 20px;
+    margin: 0 2em;
+    color: #089b8a;
+    font-weight: 200;
+}
+
 .passo {
     display: none;
 }
@@ -87,29 +104,88 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    background-color: #f0f8f8; /* Cor de fundo suave */
+    border-radius: 20px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
     width: 400px; /* Ajusta o tamanho da calculadora */
     margin: 0 auto; /* Centraliza no meio da página */
 }
 
-h1 {
+.calculator h1 {
     color: #057669;
+    font-size: 28px; /* Aumenta o título */
+    margin-bottom: 20px;
 }
 
-/* Botões gerais */
+/* Estilo dos inputs */
+input {
+    padding: 12px;
+    width: calc(100% - 24px); /* Ajuste do tamanho para alinhar com a borda */
+    border: 2px solid #057669;
+    border-radius: 12px; /* Bordas mais arredondadas */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+}
+
+input:focus {
+    border-color: #005b5c;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 90, 92, 0.5); /* Efeito de foco com sombra */
+}
+
+
+/* Estilo para a caixa de comprimento do laser */
+select {
+    width: calc(100% - -3px); /* Ajuste da largura para ocupar toda a área como os inputs */
+    padding: 10px; /* Espaçamento interno para torná-lo proporcional aos inputs */
+    font-size: 16px; /* Tamanho da fonte para harmonizar com o restante */
+    font-family: "Arial";
+    border: 2px solid #057669;
+    border-radius: 8px;
+    appearance: none; /* Remove o estilo padrão */
+    background-color: white;
+    text-align: center; /* Centraliza o texto */
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #005b5c;
+    outline: none;
+}
+
+
+/* Estilo para os options */
+select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilo do resultado */
+.result {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold; /* Deixa o texto mais destacado */
+    color: #333;
+    background-color: #e0f2f1; /* Fundo suave para destacar o resultado */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilo dos botões da calculadora */
 button {
     padding: 12px 20px;
     font-size: 18px;
-    background-color: #0288d1; 
+    font-family: "Protest Strike";
+    background-color: #155e85; 
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px; /* Bordas arredondadas */
     margin-top: 20px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transição suave */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 button:hover {
@@ -123,9 +199,11 @@ button:active {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Espaçamento extra abaixo do botão "Clique aqui para calcular" */
+/* Ajustes no botão "Mostrar calculadora" */
 #showCalculatorButton { 
     margin-bottom: 30px; /* Espaçamento maior */
+    background-color: #ff7043; /* Cor combinando com o resto da página */
+    border-radius: 12px; /* Bordas arredondadas */
 }
 
 /* Centralizando os input-groups */

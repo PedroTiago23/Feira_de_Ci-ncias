@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto feira de ciências</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,11 +17,12 @@
     <main>
         <!-- Página 01 -->
         <div class="passo ativo" id="passo-0">
-            <h1 class="pagina__titulo">Você gostaria de aprender como calcular a espessura do fio de cabelo usando laser?
+            <h1 class="pagina__titulo">Você gostaria de aprender como calcular a espessura do <br> fio de cabelo usando
+                laser?
             </h1>
-            
-            <img class="pagina__imagem" src="/images/image1.jpg">
-            
+
+            <img class="pagina__imagem" src="images/image1.jpg">
+
             <div class="buttons">
                 <button class="btn-proximo" data-proximo="1">Sim</button>
                 <button class="btn-proximo" id="fake_button" data-proximo="0">Não</button>
@@ -25,93 +30,111 @@
 
         </div>
 
-<!-- Página 02 -->
-<div class="passo" id="passo-1">
-            
-    <div id="content" class="container, transparent">
-        <h1>Ótimo!!!</h1>
-        <h1>Mas antes vamos entender 3 coisas</h1>
-        <div class="buttons">
-            <button class="btn-proximo" data-proximo="2">Vamos lá</button>
+        <!-- Página 02 -->
+        <div class="passo" id="passo-1">
+
+            <div id="content" class="container, transparent">
+                <h1>Ótimo!!!</h1>
+                <h1>Mas antes vamos entender 3 coisas</h1>
+                <div class="buttons">
+                    <button class="btn-proximo" data-proximo="2">Vamos lá</button>
+                </div>
+
+
+            </div>
         </div>
-        
-        
-    </div>
-</div>
 
         <!-- Página 03 -->
         <div class="passo" id="passo-2">
-            
+
             <div id="content" class="container, transparent">
                 <h1>1ª Difração</h1>
-                
-                <img class="pagina__imagem" src="images/image2.jpeg" >
-                
+                <p class="difracao__texto">A difração é o fenômeno que ocorre quando uma onda passa por um orifício ou
+                    contorna um objeto com dimensões semelhantes ao seu comprimento de onda. De acordo com o Princípio
+                    de Huygens, cada ponto da frente de onda que atinge um obstáculo ou fenda se comporta como uma fonte
+                    de ondas secundárias, permitindo que a onda contorne o obstáculo e siga adiante, formando regiões
+                    luminosas e escuras.</p>
+                <img class="pagina__imagem2" src="images/image2.jpeg">
+
                 <div class="buttons">
                     <button class="btn-proximo" data-proximo="3">Próximo Passo</button>
                 </div>
-                
-                
+
+
             </div>
         </div>
 
         <!-- Página 04 -->
         <div class="passo" id="passo-3">
-            
+
             <div id="content" class="container, transparent">
-                
+
                 <h1>2º Experimento de Young</h1>
-                
-                <img class="pagina__imagem" src="images/image4.jpeg" >
-                
+                <p class="difracao__texto">O experimento de Young em 1801 colocou o conceito na prática e o resultado
+                    foi o seguinte: o experimento consistia em incidir um feixe de luz por um pequeno orifício e
+                    registrar do outro lado da abertura, sobre um anteparo, a intensidade luminosa desse feixe. Nesse
+                    experimento, ele observou o aparecimento de várias faixas luminosas de intensidades diferentes. Tal
+                    fenômeno mostrava que a luz sofrera difração, assim como as ondas sonoras ou as ondas de um lago.
+                </p>
+                <img class="pagina__imagem2" src="images/image4.jpeg">
+
                 <div class="buttons">
                     <button class="btn-proximo" data-proximo="4">Próximo Passo</button>
                 </div>
-              
-                
+
+
             </div>
         </div>
 
         <!-- Página 05 -->
         <div class="passo" id="passo-4">
-            
+
             <div id="content" class="container, transparent">
-                
+
                 <h1>3º Medição da espessura do fio de cabelo</h1>
-                
-                <img class="pagina__imagem" src="images/image5.png" >
-                
-                <div class="buttons"> 
+
+                <img class="pagina__imagem" src="images/image5.png">
+
+                <div class="buttons">
                     <button class="btn-proximo" data-proximo="5">Próximo Passo</button>
                 </div>
-               
-                
+
+
             </div>
         </div>
 
         <!-- Página 06 -->
         <div class="passo" id="passo-5">
-            
+
             <div id="content" class="container, transparent">
-                
+
                 <h1>Calculadora da espessura do fio de cabelo</h1>
-                
+
                 <button id="showCalculatorButton">Clique aqui para calcular</button>
 
                 <div id="calculator" class="calculator" style="display: none;">
+
+                    <div class="input-group">
+                        <label for="franja">Selecione o tipo de laser</label>
+                        <select id="laserSelect" onchange="atualizarComprimentoDeOnda()">
+                            <option value="532e-9">Laser Verde (532 nm)</option>
+                            <option value="650e-9">Laser Vermelho (650 nm)</option>
+                            <option value="405e-9">Laser Roxo (405 nm)</option>
+                        </select>
+                    </div>
                     
                     <div class="input-group">
                         <label for="x">Distância do laser ao anteparo:</label>
                         <input type="number" id="x" value="0.0" step="any">
                     </div>
-                    
+
                     <div class="input-group">
                         <label for="y">Distância entre os centros dos primeiros máximos:</label>
                         <input type="number" id="y" value="0.0" step="any">
                     </div>
-                    
+
                     <button id="calculateButton">Mostrar Resultado</button>
-                    
+
                     <div id="result" class="result"></div>
                 </div>
             </div>
