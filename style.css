@@ -80,6 +80,15 @@ body {
     font-weight: 200;
 }
 
+
+.div_formula img {
+    width: 173vh;
+    height: 73vh;
+    margin: 10px;
+}
+
+
+
 .passo {
     display: none;
 }
